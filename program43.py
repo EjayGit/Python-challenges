@@ -1,6 +1,7 @@
-# Check if given number is a Disarium Number.
+# Print all Disarium numbers between 1 and 100.
 
-num = int(input("Enter the number: "))
+lower = 1
+upper = 1000
 
 def isDisarium(num):
     # Convert to string
@@ -16,4 +17,8 @@ def isDisarium(num):
     else:
         return False
 
-print(f'The number {num} is a Disarium number: {isDisarium(num)}')
+for i in range(lower, upper):
+    if isDisarium(i):
+        print(i)
+    else:
+        continue
