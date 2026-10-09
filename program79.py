@@ -10,3 +10,20 @@
 import re
 
 pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$#@]).{6,12}$"
+
+# User input
+string = str(input("Enter passwords in comma separated string: "))
+
+# parse input string
+myList = string.split(',')
+newList = []
+
+# for each element
+for element in myList:
+    # if pattern match, store in new list
+    if re.match(pattern, element):
+        newList.append(element)
+
+# join list into comma-separated string
+returnList = ','.join(newList)
+print(returnList)
